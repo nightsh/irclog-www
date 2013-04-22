@@ -1,0 +1,54 @@
+* {
+    font-family: verdana, sans, arial;
+    font-size: 10pt;
+    color: #000000;
+    margin: 0px 10px;
+}
+
+body {
+    background: url('bg.jpg') no-repeat 100%;
+}
+
+body>div {
+    margin: 5% auto;
+    min-height: 300px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.75);
+    filter: alpha(opacit=75)-moz-opacity:0,75;
+    border: 2px solid black;
+    color: black;
+    height: auto;
+    padding-top:3px;
+}
+
+#page {
+    text-align: center;
+    width: 350px;
+}
+
+#log {
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    text-align: left;
+    width: 80%;
+
+}
+
+a {
+    line-height: 17px;
+}
+
+a:link, 
+a:visited, 
+a:active {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
