@@ -10,7 +10,7 @@
 
     <div id="log">
     <h1> <?php echo $_GET['f'].'.log'; ?></h1>
-        <?php echo nl2br(file_get_contents($_GET['f'] . '.log')); ?>
+        <?php echo nl2br(htmlentities(file_get_contents($_GET['f'] . '.log'))); ?>
     </div>
 
     <?php else: ?>
