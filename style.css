@@ -24,6 +24,7 @@ body>div {
 #page {
     text-align: center;
     width: 450px;
+    overflow: hidden;
 }
 
 #log {

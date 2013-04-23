@@ -32,6 +32,7 @@
             '\1-\2-\3', $file
         );
         $files["$date"] = $file;
+        //$files["$date"] = str_replace('.log','',$file);
     }
 
     asort($files);
