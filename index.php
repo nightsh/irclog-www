@@ -1,4 +1,5 @@
 <?php
+    ini_set('default_charset', 'UTF-8');
     header('Content-type: text/html; charset=utf-8');
     require_once("./config.php");
     global $config;
@@ -17,7 +18,9 @@
 
     <div id="log">
     <h1> <?php echo $_GET['f'].'.log'; ?></h1>
-         <?php echo nl2br(htmlentities(file_get_contents($_GET['f'] . '.log'))); ?>
+         <?php echo nl2br(htmlentities(file_get_contents(
+                        $_GET['f'] . '.log'
+                    ))); ?>
     </div>
 
     <?php else: ?>
