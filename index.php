@@ -37,14 +37,20 @@
     asort($files);
     $files = array_reverse($files);
 
+    ?>
+
+    <table>
+    <?php
     foreach ($files as $date => $file) {
         printf(
-            '<span class="date">' . $date
-            . '</span><a href="?f=%s" class="log_link">%s</a><br>',
+            '<tr><td><span class="date">' . $date
+            . '</span></td><td>'
+            . '<a href="?f=%s" class="log_link">%s</a></td>',
             str_replace('.log', '', $file), $file
         );
     }
     ?>
+    </table>
 
     </div>
     <?php endif; ?>
