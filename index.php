@@ -1,6 +1,12 @@
+<?php
+    require_once 'config.php';
+    global $config;
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset='<?php echo $config['charset']; ?>'>
     <title>Logs</title>
     <link rel="stylesheet" href="./style.css" />
 </head>
@@ -18,12 +24,11 @@
     <div id="page">
 
     <?php
-    foreach (glob('*.log') as $file) {
-        if(!preg_match("/^ChanServ.*/", $file))
-            printf(
-                '<a href="?f=%s" class="log_link">%s</a><br>',
-                str_replace('.log','',$file), $file
-            );
+    foreach (glob($config['globPattern']) as $file) {
+        printf(
+            '<a href="?f=%s" class="log_link">%s</a><br>',
+            str_replace('.log', '', $file), $file
+        );
     }
     ?>
 
